@@ -2,7 +2,7 @@
 
   <div id="menu-area">
     <nav class="nav-tablet-mobile" id="nav-tablet-mobile">
-    <button class="nav-tablet-mobile__icon" id="toggle">
+      <button class="nav-tablet-mobile__icon" id="toggle">
         <div class="line line1"></div>
         <div class="line line2"></div>
       </button>
@@ -13,10 +13,13 @@
         <li><a href="#">TIN TỨC</a></li>
         <li><a href="#">GIỚI THIỆU</a></li>
         <li><a href="#">LIÊN HỆ</a></li>
+        <li class="">
+          <span class="" id="login-tab">ĐĂNG NHẬP</span>
+        </li>
       </ul>
-      
+
     </nav>
-    
+
     <div class="logo">
       <a href="<?= BASE_URL ?>" class="logo__link">
         <img class="logo__img" src="<?= BASE_URL ?>/MVC/public/images/metacoffee.png" alt="Logo-ToCoToCo" />
@@ -46,7 +49,7 @@
       </li>
     </ul>
 
-    <ul class="menu-list2">
+    <ul class="menu-list2  hide-on-tablet-mobile">
       <li class="menu-item2">
         <a href="<?= BASE_URL ?>/cart" class="cart"><i class="cart-icon ti-shopping-cart"></i>
           <span class="cart-notice">3</span></a>

@@ -32,17 +32,38 @@
           <li class="product-detail__item">Tình trạng: <span>Còn hàng</span></li>
           <li class="product-detail__item">Topping: <span>Full Topping</span></li>
           <li class="product-detail__item">Vận chuyển: <span>Có</span></li>
-          <li class="product-detail__item">Đã bán: <span>3</span></li>
         </ul>
       </div>
 
       <div class="purchase-info">
-        <button class="btn" id="minus">-</button>
-        <input type="number" readonly min="1" value="1" id="input">
-        <button class="btn" id="plus" style="margin-right: 50px;">+</button>
-        <button class="size">S</button>
+        <!-- <div class="quantity"> -->
+          <div class="quantity buttons_added">
+            <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+          </div>
+          <!-- <button class="btn" id="minus">-</button>
+          <input type="number" readonly value="1" id="input">
+          <button class="btn" id="plus" style="margin-right: 50px;">+</button> -->
+        <!-- </div> -->
+        <div class="size">
+          <div class="size-radio">
+            <input type="radio" id="radio1" name="group-radio" />
+            <label for="radio1">S</label>
+          </div>
+          <div class="size-radio">
+            <input type="radio" id="radio2" name="group-radio" checked />
+            <label for="radio2">M</label>
+          </div>
+          <div class="size-radio">
+            <input type="radio" id="radio3" name="group-radio" />
+            <label for="radio3">L</label>
+          </div>
+        </div>
+        <!-- <input type="radio" class="size">
+        <input type="radio" class="size">
+        <input type="radio" class="size"> -->
+        <!-- <button class="size">S</button>
         <button class="size">M</button>
-        <button class="size">L</button>
+        <button class="size">L</button> -->
       </div>
 
       <div class="click">

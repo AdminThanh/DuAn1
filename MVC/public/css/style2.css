@@ -185,6 +185,9 @@ img {
 }
 .purchase-info {
   margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .purchase-info input {
   width: 60px;
@@ -211,20 +214,114 @@ img {
   border-radius: 3px;
   cursor: pointer;
 }
-.purchase-info .size {
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: 1px solid rgb(241, 127, 146);
-  color: rgb(241, 127, 146);
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
+.purchase-info .btn:focus {
+  outline: none;
 }
-.purchase-info button:hover {
-  transition: 0.4s ease-in-out;
+.purchase-info .quantity {
+  display: flex;
+  align-items: center;
+}
+/* .quantity {
+  display: inline-block; } */
+ 
+ .quantity .input-text.qty {
+  width: 35px;
+  height: 39px;
+  padding: 0 5px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #efefef;
+ }
+ 
+ .quantity.buttons_added {
+  text-align: left;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: top; }
+ 
+ .quantity.buttons_added input {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  box-shadow: none;
+ }
+ 
+ .quantity.buttons_added .minus,
+ .quantity.buttons_added .plus {
+  padding: 7px 10px 8px;
+  height: 41px;
+  background-color: #ffffff;
+  border: 1px solid #efefef;
+  cursor:pointer;}
+ 
+ .quantity.buttons_added .minus {
+  border-right: 0; }
+ 
+ .quantity.buttons_added .plus {
+  border-left: 0; }
+ 
+ .quantity.buttons_added .minus:hover,
+ .quantity.buttons_added .plus:hover {
+  background: #eeeeee; }
+ 
+ .quantity input::-webkit-outer-spin-button,
+ .quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0; }
+  
+  .quantity.buttons_added .minus:focus,
+ .quantity.buttons_added .plus:focus {
+  outline: none; }
+
+.purchase-info .size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.purchase-info .size .size-radio {
+  margin: 0 10px;
+}
+.purchase-info .size input[type="radio"] { 
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+.purchase-info .size input[type="radio"] { 
+  display: none;
+}
+.purchase-info .size label {
+  padding-left: 35px; 
+  /* // Khoảng cách này để mình chứa style cho ô radio */
+  position: relative;
+  margin: 0;
+  line-height: 20px;
+  font-size: 1.6rem;
+}
+.purchase-info .size label:before {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  content: '';
+  background: #fff;
+  border: 1px solid black;
+}
+.purchase-info .size input[type="radio"]:checked ~ label:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  content: '';
   background: rgb(241, 127, 146);
-  color: #000;
 }
 
 /* .click{

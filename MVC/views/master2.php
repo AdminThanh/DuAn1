@@ -29,6 +29,7 @@
     <script src="<?= BASE_URL ?>/MVC/public/js/sroll.js"></script>
     <!-- <script src="<?= BASE_URL ?>/MVC/public/js/slider.js"></script> -->
     <script src="<?= BASE_URL ?>/MVC/public/js/filter_price.js"></script>
+    <script src="<?= BASE_URL ?>/MVC/public/js/quantity_product.js"></script>
 </body>
 
 </html>

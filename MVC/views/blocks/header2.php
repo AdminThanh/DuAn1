@@ -72,7 +72,7 @@
         <img src="http://localhost/DuAn1/MVC/public/images/bg-con.png" alt="">
         <div class="banner-texts">
             <h1 class="text-black">Đặt món nào</h1>
-            <p class="text-red">Cùng free ship</p>
+            <p class="text-red">Cũng free ship</p>
             <form action="" id="search-bn">
                 <i class="fas fa-search search-bn"></i>
                 <input class="search-sp" type="text" placeholder="Tìm đồ ăn hoặc nước uống mà bạn thích...">
