@@ -27,11 +27,13 @@
             <li class="menu-item">
                 <a href="" class="menu-item__link">LIÊN HỆ</a>
             </li>
-            <li class="menu-item">
-                <a href="" class="cart"><i class="cart-icon ti-shopping-cart"></i>
+        </ul>
+        <ul class="menu-list2">
+            <li class="menu-item2">
+                <a href="<?= BASE_URL ?>/cart" class="cart"><i class="cart-icon ti-shopping-cart"></i>
                     <span class="cart-notice">3</span></a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item2">
                 <!-- <a href="" class="login">ĐĂNG NHẬP</a> -->
 
                 <!-- User -->
@@ -42,18 +44,18 @@
                     </div>
                     <ul class="login-children__list" onblur="loginOnblur()">
                         <li class="login-item">
-                            <a class="login-link" href="">
-                            <i class="fas fa-user"></i>Tài khoản của tôi
+                            <a class="login-link" href="<?= BASE_URL ?>/home/user">
+                                <i class="fas fa-user"></i>Tài khoản của tôi
                             </a>
                         </li>
                         <li class="login-item">
                             <a class="login-link" href="">
-                            <i class="fas fa-key"></i>Đổi mật khẩu
+                                <i class="fas fa-key"></i>Đổi mật khẩu
                             </a>
                         </li>
                         <li class="login-item">
                             <a class="login-link" href="">
-                            <i class="fas fa-sign-out-alt"></i>Đăng xuất
+                                <i class="fas fa-sign-out-alt"></i>Đăng xuất
                             </a>
                         </li>
                     </ul>
@@ -65,7 +67,7 @@
 
         </div>
     </div>
-<div class="clear"></div>
+    <div class="clear"></div>
     <!-- <div class="banners">
         <img src="http://localhost/DuAn1/MVC/public/images/bg-con.png" alt="">
         <div class="banner-texts">

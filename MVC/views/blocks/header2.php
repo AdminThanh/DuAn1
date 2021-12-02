@@ -30,7 +30,7 @@
         </ul>
         <ul class="menu-list2">
             <li class="menu-item2">
-                <a href="" class="cart"><i class="cart-icon ti-shopping-cart"></i>
+                <a href="<?= BASE_URL ?>/cart" class="cart"><i class="cart-icon ti-shopping-cart"></i>
                     <span class="cart-notice">3</span></a>
             </li>
             <li class="menu-item2">

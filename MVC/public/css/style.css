@@ -46,7 +46,7 @@
 .bold {
   font-weight: bold;
 }
-.error{
+.error {
   color: red;
 }
 /* Menu-Area */
@@ -961,9 +961,14 @@ section.product-carts .cart-list .table-cart tbody tr td {
 section.product-carts .cart-list .table-cart tbody tr td input.numCart {
   width: 50px;
 }
+.delete-link:hover .tooltip {
+  transition: all 0.1s linear;
+  color: var(--primary-color);
+}
 .tooltip {
   display: inline-block;
   color: #282828;
+  font-size: 2rem;
 }
 
 .tooltip .tooltiptext {
@@ -1089,10 +1094,15 @@ main.container .checkout .checkout-main form.form-checkout input[type="radio"] {
 }
 main.container .checkout .checkout-main form.form-checkout label {
   display: block;
-  font-size: 1.7rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
+.form-payment {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 main.container .checkout .checkout-main form.form-checkout .form-group {
   display: flex;
   align-items: center;
@@ -1311,7 +1321,7 @@ form#form_login button:hover {
   opacity: 0.9;
 }
 /* =======END LOGIN============== */
-#login-dev{
+#login-dev {
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -1320,18 +1330,18 @@ form#form_login button:hover {
   padding: 2rem 1rem 5rem;
   box-shadow: var(--shadow-primary);
 }
-#login-dev .login-title{
+#login-dev .login-title {
   text-align: center;
-  font-size:2.5rem;
+  font-size: 2.5rem;
 }
-#form_login{
+#form_login {
   max-width: 600px;
   margin: 0px auto;
 }
-#form_login input{
+#form_login input {
   width: 100%;
 }
-#form_login input[type="checkbox"]{
+#form_login input[type="checkbox"] {
   width: 3%;
 }
 /* =======REGSITER============== */
@@ -1633,6 +1643,7 @@ form#form_forgot button:hover {
 }
 .slidebar {
   border-radius: 2px;
+  max-width: 254px;
   /* background-color: var(--white-color); */
 }
 .slidebar-menu {
@@ -1884,6 +1895,10 @@ input[type="range"]::-ms-thumb {
   justify-content: space-around;
   align-items: center;
 }
+.autoplay {
+  display: flex;
+  overflow-x: hidden;
+}
 .favorite-product__heading {
   font-size: 1.8rem;
   color: var(--text-color);
@@ -2052,7 +2067,7 @@ input[type="range"]::-ms-thumb {
 }
 .change-password__btn:hover {
 }
-.info-user .btn:hover{
+.info-user .btn:hover {
   opacity: 0.9;
 }
 .info-user__main {

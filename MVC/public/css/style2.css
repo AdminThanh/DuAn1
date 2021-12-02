@@ -91,14 +91,14 @@ img {
 .product-content {
   padding: 2rem 1rem;
 }
-.product-title{
-    font-size: 2rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    font-weight: 700;
-    position: relative;
-    color: #12263a;
-    margin: 1rem 0;
+.product-title {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+  color: #12263a;
+  margin: 1rem 0;
 }
 .product-title {
   font-size: 2rem;
@@ -184,9 +184,9 @@ img {
   border-radius: 6px;
 }
 .purchase-info {
-  margin: 1.5rem 0;
+  margin: 15px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .purchase-info input {
@@ -223,56 +223,64 @@ img {
 }
 /* .quantity {
   display: inline-block; } */
- 
- .quantity .input-text.qty {
+
+.quantity .input-text.qty {
   width: 35px;
   height: 39px;
   padding: 0 5px;
   text-align: center;
   background-color: transparent;
   border: 1px solid #efefef;
- }
- 
- .quantity.buttons_added {
+  margin: 0 10px;
+}
+
+.quantity.buttons_added {
   text-align: left;
   position: relative;
   white-space: nowrap;
-  vertical-align: top; }
- 
- .quantity.buttons_added input {
+  vertical-align: top;
+}
+
+.quantity.buttons_added input {
   display: inline-block;
   margin: 0;
   vertical-align: top;
   box-shadow: none;
- }
- 
- .quantity.buttons_added .minus,
- .quantity.buttons_added .plus {
+}
+
+.quantity.buttons_added .minus,
+.quantity.buttons_added .plus {
   padding: 7px 10px 8px;
   height: 41px;
   background-color: #ffffff;
   border: 1px solid #efefef;
-  cursor:pointer;}
- 
- .quantity.buttons_added .minus {
-  border-right: 0; }
- 
- .quantity.buttons_added .plus {
-  border-left: 0; }
- 
- .quantity.buttons_added .minus:hover,
- .quantity.buttons_added .plus:hover {
-  background: #eeeeee; }
- 
- .quantity input::-webkit-outer-spin-button,
- .quantity input::-webkit-inner-spin-button {
+  cursor: pointer;
+}
+
+.quantity.buttons_added .minus {
+  border-right: 0;
+}
+
+.quantity.buttons_added .plus {
+  border-left: 0;
+}
+
+.quantity.buttons_added .minus:hover,
+.quantity.buttons_added .plus:hover {
+  background: var(--secondary-color);
+}
+
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
-  margin: 0; }
-  
-  .quantity.buttons_added .minus:focus,
- .quantity.buttons_added .plus:focus {
-  outline: none; }
+  margin: 0;
+}
+
+.quantity.buttons_added .minus:focus,
+.quantity.buttons_added .plus:focus {
+  outline: none;
+}
 
 .purchase-info .size {
   display: flex;
@@ -282,18 +290,18 @@ img {
 .purchase-info .size .size-radio {
   margin: 0 10px;
 }
-.purchase-info .size input[type="radio"] { 
+.purchase-info .size input[type="radio"] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   width: 0;
   height: 0;
 }
-.purchase-info .size input[type="radio"] { 
+.purchase-info .size input[type="radio"] {
   display: none;
 }
 .purchase-info .size label {
-  padding-left: 35px; 
+  padding-left: 35px;
   /* // Khoảng cách này để mình chứa style cho ô radio */
   position: relative;
   margin: 0;
@@ -308,7 +316,7 @@ img {
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-  content: '';
+  content: "";
   background: #fff;
   border: 1px solid black;
 }
@@ -320,7 +328,7 @@ img {
   top: 50%;
   transform: translateY(-50%);
   left: 5px;
-  content: '';
+  content: "";
   background: rgb(241, 127, 146);
 }
 

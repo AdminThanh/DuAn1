@@ -27,7 +27,10 @@
                         <td>100.000 VNĐ</td>
                         <td>100.000 VNĐ</td>
                         <td>
-                            <a href=""><i class="far fa-trash-alt tooltip"><span class="tooltiptext">Xóa</span></i></a>
+                            <a class="delete-link" href=""><i class="far fa-trash-alt tooltip">
+                                    <!-- <span class="tooltiptext">Xóa</span> -->
+                                </i>
+                            </a>
                         </td>
                     </tr>
                     <tr>
@@ -37,7 +40,10 @@
                         <td>100.000 VNĐ</td>
                         <td>100.000 VNĐ</td>
                         <td>
-                            <a href=""><i class="far fa-trash-alt tooltip"><span class="tooltiptext">Xóa</span></i></a>
+                            <a class="delete-link" href=""><i class="far fa-trash-alt tooltip">
+                                    <!-- <span class="tooltiptext">Xóa</span> -->
+                                </i>
+                            </a>
                         </td>
                     </tr>
                     <tr>
@@ -47,7 +53,10 @@
                         <td>100.000 VNĐ</td>
                         <td>100.000 VNĐ</td>
                         <td>
-                            <a href=""><i class="far fa-trash-alt tooltip"><span class="tooltiptext">Xóa</span></i></a>
+                            <a class="delete-link" href=""><i class="far fa-trash-alt tooltip">
+                                    <!-- <span class="tooltiptext">Xóa</span> -->
+                                </i>
+                            </a>
                         </td>
                     </tr>
                 </tbody>
@@ -62,13 +71,13 @@
                 <h3>Tổng giỏ hàng</h3>
                 <div class="price-provisional">
                     <p>Tạm tính</p>
-                    <p class="text-red font-bold">1000.000 VNĐ</p>
+                    <p class="text-red font-bold">100.000 VNĐ</p>
                 </div>
                 <div class="price-total">
                     <p>Tổng đơn hàng</p>
-                    <p class="text-red font-bold">1000.000 VNĐ</p>
+                    <p class="text-red font-bold">100.000 VNĐ</p>
                 </div>
-                <a class="checkout-btn" href="<?=BASE_URL?>/home/checkout">Tiến hành thanh toán</a>
+                <a class="checkout-btn" href="<?= BASE_URL ?>/home/checkout">Tiến hành thanh toán</a>
             </div>
         </section>
     </section>

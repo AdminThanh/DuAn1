@@ -103,77 +103,153 @@
                             <i class="toggle-icon fas fa-arrow-right"></i>
                         </div>
                     </div>
-                    <div class="favorite-product__list">
-                        <a class="favorite-product__item" href="">
-                            <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
-                            <div class="favorite-product__info">
-                                <div class="favorite-product__name">Sữa tươi chân trâu</div>
-                                <div class="favorite-product__rating">
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
+                    <div class="autoplay">
+
+
+                        <div class="favorite-product__list">
+                            <a class="favorite-product__item" href="">
+                                <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
+                                <div class="favorite-product__info">
+                                    <div class="favorite-product__name">Sữa tươi chân trâu</div>
+                                    <div class="favorite-product__rating">
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                    </div>
+                                    <div class="favorite-product__price">45,000 đ</div>
                                 </div>
-                                <div class="favorite-product__price">45,000 đ</div>
-                            </div>
-                        </a>
-                        <a class="favorite-product__item" href="">
-                            <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
-                            <div class="favorite-product__info">
-                                <div class="favorite-product__name">Sữa tươi chân trâu</div>
-                                <div class="favorite-product__rating">
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
+                            </a>
+                            <a class="favorite-product__item" href="">
+                                <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
+                                <div class="favorite-product__info">
+                                    <div class="favorite-product__name">Sữa tươi chân trâu</div>
+                                    <div class="favorite-product__rating">
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                    </div>
+                                    <div class="favorite-product__price">45,000 đ</div>
                                 </div>
-                                <div class="favorite-product__price">45,000 đ</div>
-                            </div>
-                        </a>
-                        <a class="favorite-product__item" href="">
-                            <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
-                            <div class="favorite-product__info">
-                                <div class="favorite-product__name">Sữa tươi chân trâu</div>
-                                <div class="favorite-product__rating">
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
+                            </a>
+                            <a class="favorite-product__item" href="">
+                                <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
+                                <div class="favorite-product__info">
+                                    <div class="favorite-product__name">Sữa tươi chân trâu</div>
+                                    <div class="favorite-product__rating">
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                    </div>
+                                    <div class="favorite-product__price">45,000 đ</div>
                                 </div>
-                                <div class="favorite-product__price">45,000 đ</div>
-                            </div>
-                        </a>
-                        <a class="favorite-product__item" href="">
-                            <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
-                            <div class="favorite-product__info">
-                                <div class="favorite-product__name">Sữa tươi chân trâu</div>
-                                <div class="favorite-product__rating">
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
+                            </a>
+                            <a class="favorite-product__item" href="">
+                                <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
+                                <div class="favorite-product__info">
+                                    <div class="favorite-product__name">Sữa tươi chân trâu</div>
+                                    <div class="favorite-product__rating">
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                    </div>
+                                    <div class="favorite-product__price">45,000 đ</div>
                                 </div>
-                                <div class="favorite-product__price">45,000 đ</div>
-                            </div>
-                        </a>
-                        <a class="favorite-product__item" href="">
-                            <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
-                            <div class="favorite-product__info">
-                                <div class="favorite-product__name">Sữa tươi chân trâu</div>
-                                <div class="favorite-product__rating">
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
-                                    <i class="rating-icon fas fa-star"></i>
+                            </a>
+                            <a class="favorite-product__item" href="">
+                                <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
+                                <div class="favorite-product__info">
+                                    <div class="favorite-product__name">Sữa tươi chân trâu</div>
+                                    <div class="favorite-product__rating">
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                    </div>
+                                    <div class="favorite-product__price">45,000 đ</div>
                                 </div>
-                                <div class="favorite-product__price">45,000 đ</div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
+                        <div class="favorite-product__list">
+                            <a class="favorite-product__item" href="">
+                                <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
+                                <div class="favorite-product__info">
+                                    <div class="favorite-product__name">Sữa tươi chân trâu</div>
+                                    <div class="favorite-product__rating">
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                    </div>
+                                    <div class="favorite-product__price">45,000 đ</div>
+                                </div>
+                            </a>
+                            <a class="favorite-product__item" href="">
+                                <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
+                                <div class="favorite-product__info">
+                                    <div class="favorite-product__name">Sữa tươi chân trâu</div>
+                                    <div class="favorite-product__rating">
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                    </div>
+                                    <div class="favorite-product__price">45,000 đ</div>
+                                </div>
+                            </a>
+                            <a class="favorite-product__item" href="">
+                                <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
+                                <div class="favorite-product__info">
+                                    <div class="favorite-product__name">Sữa tươi chân trâu</div>
+                                    <div class="favorite-product__rating">
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                    </div>
+                                    <div class="favorite-product__price">45,000 đ</div>
+                                </div>
+                            </a>
+                            <a class="favorite-product__item" href="">
+                                <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
+                                <div class="favorite-product__info">
+                                    <div class="favorite-product__name">Sữa tươi chân trâu</div>
+                                    <div class="favorite-product__rating">
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                    </div>
+                                    <div class="favorite-product__price">45,000 đ</div>
+                                </div>
+                            </a>
+                            <a class="favorite-product__item" href="">
+                                <img src="<?= BASE_URL ?>/MVC/public/images/products/choco-creamcake.png" alt="" class="favorite-product__img">
+                                <div class="favorite-product__info">
+                                    <div class="favorite-product__name">Sữa tươi chân trâu</div>
+                                    <div class="favorite-product__rating">
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                        <i class="rating-icon fas fa-star"></i>
+                                    </div>
+                                    <div class="favorite-product__price">45,000 đ</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

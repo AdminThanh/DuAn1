@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 24, 2021 lúc 07:59 AM
+-- Thời gian đã tạo: Th12 01, 2021 lúc 10:10 AM
 -- Phiên bản máy phục vụ: 10.4.19-MariaDB
 -- Phiên bản PHP: 8.0.7
 
@@ -29,8 +29,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `category` (
   `category_id` int(11) NOT NULL,
-  `category_name` int(11) NOT NULL
+  `category_name` varchar(50) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `category`
+--
+
+INSERT INTO `category` (`category_id`, `category_name`) VALUES
+(1, 'Trà sữa'),
+(2, 'Cà phê'),
+(3, 'Nước uống trái cây'),
+(4, 'Trà kem phô mai'),
+(11, 'Sữa chua dẽo');
 
 -- --------------------------------------------------------
 
@@ -45,6 +56,13 @@ CREATE TABLE `comment` (
   `comment_content` varchar(255) CHARACTER SET utf8 NOT NULL,
   `comment_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `comment`
+--
+
+INSERT INTO `comment` (`comment_id`, `user_id`, `product_id`, `comment_content`, `comment_date`) VALUES
+(2, 4, 17, 'Hello', '2021-12-01 09:27:28');
 
 -- --------------------------------------------------------
 
@@ -90,9 +108,29 @@ CREATE TABLE `product` (
   `thumbnail` varchar(255) CHARACTER SET utf8 NOT NULL,
   `description` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `price_sale` float NOT NULL,
+  `active` int(11) NOT NULL,
   `view` int(11) NOT NULL,
   `import_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `product`
+--
+
+INSERT INTO `product` (`product_id`, `category_id`, `product_name`, `thumbnail`, `description`, `price_sale`, `active`, `view`, `import_date`) VALUES
+(8, 1, 'Ô long Trân châu Baby Kem Café', 'mvc/public/images/products/ezgif.com-gif-maker-6 (1).jpg', '', 0, 1, 0, '2021-11-30 15:52:33'),
+(11, 1, 'Sữa Tươi Trân Châu Baby Kem Café', 'mvc/public/images/products/ezgif.com-gif-maker-6.jpg', '', 0, 1, 0, '2021-12-01 05:53:57'),
+(12, 1, 'Trà xanh', 'mvc/public/images/products/ezgif.com-gif-maker-13.jpg', '', 10, 1, 0, '2021-12-01 08:35:15'),
+(13, 1, 'Ô long thái cực', 'mvc/public/images/products/ezgif.com-gif-maker-19.jpg', '', 5, 1, 0, '2021-12-01 08:35:47'),
+(14, 3, 'Probi Bưởi Trân Châu Sương Mai', 'mvc/public/images/products/ezgif.com-gif-maker-2.jpg', '', 0, 1, 0, '2021-12-01 08:36:38'),
+(15, 3, 'Trà dâu tằm pha lê tuyết', 'mvc/public/images/products/dâu-tằm-pha-lê-tuyết.jpg', '', 0, 1, 0, '2021-12-01 08:37:06'),
+(16, 3, 'Hồng Trà Bưởi Mật Ong', 'mvc/public/images/products/ezgif.com-gif-maker-7.jpg', '', 0, 1, 0, '2021-12-01 08:38:03'),
+(17, 4, 'Dâu Tằm Kem Phô Mai', 'mvc/public/images/products/dau_tam_kem_pho_mai_09a4c4b857694d918a86542225fc2867_grande.jpg', '', 0, 1, 0, '2021-12-01 08:39:45'),
+(18, 4, 'Hồng Trà Kem Phô Mai', 'mvc/public/images/products/hong_tra_kem_pho_mai_bea768e4679b4a2bbea0d5730fc75ffa_4dbc2f739c184bbbad3cee27aab5cfcd_grande.jpg', '', 0, 1, 0, '2021-12-01 08:40:14'),
+(19, 4, 'Trà Xanh Kem Phô Mai', 'mvc/public/images/products/tra_xanh_kem_pho_mai_1ed02f821288425d87dd9fc096c62768_40b394e0280f4d55819de201a4405718_grande.jpg', '', 0, 1, 0, '2021-12-01 08:40:42'),
+(20, 4, 'Matcha Kem Phô Mai', 'mvc/public/images/products/matcha-kem-pho-mai_09b3b54997614aea86d2b61bcd7f548c_73a9e7cd539949718b13b06c5db9522f_grande.png', '', 0, 1, 0, '2021-12-01 08:41:13'),
+(21, 11, 'Sữa Chua Dâu Tằm Hoàng Kim', 'mvc/public/images/products/sua-chua-dau-tam-hoang-kim.png', '', 0, 1, 0, '2021-12-01 08:43:00'),
+(22, 11, 'Sữa Chua Trắng', 'mvc/public/images/products/sua-chua-trang-.png', '', 0, 1, 0, '2021-12-01 08:43:20');
 
 -- --------------------------------------------------------
 
@@ -104,6 +142,14 @@ CREATE TABLE `role` (
   `role_id` int(11) NOT NULL,
   `role_name` varchar(25) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `role`
+--
+
+INSERT INTO `role` (`role_id`, `role_name`) VALUES
+(1, 'Người dùng'),
+(2, 'Quản lý');
 
 -- --------------------------------------------------------
 
@@ -122,6 +168,15 @@ CREATE TABLE `user` (
   `verify` varchar(10) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Đang đổ dữ liệu cho bảng `user`
+--
+
+INSERT INTO `user` (`user_id`, `role_id`, `name`, `email`, `phone`, `password`, `address`, `verify`) VALUES
+(1, 2, 'thanh dang', 'bossryo68@gmail.com', '04387578520', '84387578520', '', '26333'),
+(2, 1, 'Đăng Thànhh12', 'bossryo6811@gmail.com', '843875785201', '84387578520', 'Tầng 2 tòa nhà T10, Times City Vĩnh Tuy, Hai Bà Trưng, Hà Nội.', '12564'),
+(4, 1, 'Nguyễn Đăng Thành', '1', '1', '1', '1212121', '1');
+
 -- --------------------------------------------------------
 
 --
@@ -132,8 +187,51 @@ CREATE TABLE `variant` (
   `variant_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `size` varchar(5) CHARACTER SET utf8 NOT NULL,
-  `price` float NOT NULL
+  `price` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `variant`
+--
+
+INSERT INTO `variant` (`variant_id`, `product_id`, `size`, `price`) VALUES
+(9, 8, 'Nhỏ', 22000),
+(10, 8, 'Vừa', 28000),
+(11, 8, 'Lớn', 35000),
+(18, 11, 'Nhỏ', 22000),
+(19, 11, 'Vừa', 29000),
+(20, 11, 'Lớn', 35000),
+(21, 12, 'Nhỏ', 22000),
+(22, 12, 'Vừa', 29000),
+(23, 12, 'Lớn', 35000),
+(24, 13, 'Nhỏ', 22000),
+(25, 13, 'Vừa', 29000),
+(26, 13, 'Lớn', 35000),
+(27, 14, 'Nhỏ', 22000),
+(28, 14, 'Vừa', 29000),
+(29, 14, 'Lớn', 35000),
+(30, 15, 'Nhỏ', 22000),
+(31, 15, 'Vừa', 29000),
+(32, 15, 'Lớn', 35000),
+(33, 16, 'Nhỏ', 22000),
+(34, 16, 'Vừa', 29000),
+(35, 16, 'Lớn', 35000),
+(36, 17, 'Nhỏ', 22000),
+(37, 17, 'Vừa', 29000),
+(38, 17, 'Lớn', 35000),
+(39, 18, 'Nhỏ', 22000),
+(40, 18, 'Vừa', 29000),
+(41, 18, 'Lớn', 35000),
+(42, 19, 'Nhỏ', 22000),
+(43, 19, 'Vừa', 29000),
+(44, 19, 'Lớn', 35000),
+(45, 20, 'Nhỏ', 22000),
+(46, 20, 'Vừa', 29000),
+(47, 20, 'Lớn', 35000),
+(48, 21, 'Nhỏ', 22000),
+(49, 21, 'Vừa', 29000),
+(50, 21, 'Lớn', 35000),
+(51, 22, 'Vừa', 29000);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -203,13 +301,13 @@ ALTER TABLE `variant`
 -- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `orders`
@@ -227,25 +325,25 @@ ALTER TABLE `order_details`
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT cho bảng `role`
 --
 ALTER TABLE `role`
-  MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `variant`
 --
 ALTER TABLE `variant`
-  MODIFY `variant_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `variant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

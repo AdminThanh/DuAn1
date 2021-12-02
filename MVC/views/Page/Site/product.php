@@ -37,10 +37,10 @@
 
       <div class="purchase-info">
         <!-- <div class="quantity"> -->
-          <div class="quantity buttons_added">
-            <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-          </div>
-          <!-- <button class="btn" id="minus">-</button>
+        <div class="quantity buttons_added">
+          <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+        </div>
+        <!-- <button class="btn" id="minus">-</button>
           <input type="number" readonly value="1" id="input">
           <button class="btn" id="plus" style="margin-right: 50px;">+</button> -->
         <!-- </div> -->
@@ -74,15 +74,28 @@
   </div>
   <div class="nhan_container">
     <ul class="tab_navigation">
-      <li>Mô tả</li>
-      <li>Đánh giá</li>
+      <li>
+        <input type="radio" value="desc" id="" name="desc" checked>
+        <label for="desc">Mô tả</label>
+
+      </li>
+      <li>
+        <input type="radio" value="rate" id="" name="desc">
+        <label for="rate">Đánh giá</label>
+
+      </li>
     </ul>
     <div class="tab_container_area">
-      <div class="tab_container">
+      <div class="tab_container content-desc ">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat doloribus dolor deleniti facilis temporibus aperiam sint. Omnis eum fuga distinctio vitae rerum, sed laudantium ipsa totam, magnam sapiente consequatur!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga rem ipsum atque nam velit deserunt, earum officiis est aliquam recusandae similique fugiat voluptatum cupiditate eius magnam quibusdam unde iste.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ab distinctio culpa quia quas hic, cumque eum est eligendi quam cupiditate repudiandae, reprehenderit soluta inventore labore dignissimos veniam ipsum non?</p>
       </div>
+      <!-- <div class="tab_container content-rate content-banking-none">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat doloribus dolor deleniti facilis temporibus aperiam sint. Omnis eum fuga distinctio vitae rerum, sed laudantium ipsa totam, magnam sapiente consequatur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga rem ipsum atque nam velit deserunt, earum officiis est aliquam recusandae similique fugiat voluptatum cupiditate eius magnam quibusdam unde iste.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ab distinctio culpa quia quas hic, cumque eum est eligendi quam cupiditate repudiandae, reprehenderit soluta inventore labore dignissimos veniam ipsum non?</p>
+      </div> -->
     </div>
     <div class="tab_container_area">
       <div class="tab_container">
