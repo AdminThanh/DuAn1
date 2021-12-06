@@ -2,7 +2,7 @@
     <nav class="nav-top">
         <ul>
             <li><a href=""><i class="fas fa-home"></i>Trang chủ</a></li><span>/</span>
-            <li><a href="">Thực đơn</a></li>
+            <li><a href="">Thông tin người dùng</a></li>
         </ul>
     </nav>
     <div class="info-user">
@@ -26,6 +26,7 @@
                 </div>
                 <button class="btn btn--primary change-password__btn">Thay đổi</button>
             </form>
+<<<<<<< HEAD
             <form action="" method="" class="col l-9 info-user__main">
                 <?php
                 $row = mysqli_fetch_assoc($data['ShowAboutUser']);
@@ -33,21 +34,43 @@
                 <div class="info-user__main-item">
                     <p class="info-user__text">Tên <sup style="color:red;">*</sup></p>
                     <input type="text" name="" id="" class="info-user__input" value="<?=$row['name']?>" placeholder="Nhập tên của bạn">
+=======
+
+            <form action="" id="edit_user" method="" class="col l-9 info-user__main">
+                <?php $rows = mysqli_fetch_assoc($data['ShowAbout']) ?>
+
+                <div class="info-user__main-item">
+                    <p class="info-user__text">Tên <sup style="color:red;">*</sup></p>
+                    <input type="text" name="name" id="" class="info-user__input" value="<?= $rows['name'] ?>" placeholder="Nhập tên của bạn">
+                    <input type="text" name="user_id" hidden id="" class="info-user__input" value="<?= $rows['user_id'] ?>">
+>>>>>>> 83c1e50fd4670d59bd365b251706b880a1857279
                 </div>
 
                 <div class="info-user__main-item">
                     <p class="info-user__text">Địa chỉ <sup style="color:red;">*</sup></p>
+<<<<<<< HEAD
                     <input type="text" name="" id="" class="info-user__input" value="<?=$row['address']?>" placeholder="Nhập địa chỉ của bạn">
+=======
+                    <input type="text" name="address" id="" class="info-user__input" value="<?= $rows['address'] ?>" placeholder="Nhập địa chỉ của bạn">
+>>>>>>> 83c1e50fd4670d59bd365b251706b880a1857279
                 </div>
 
                 <div class="info-user__main-item contact-info__list">
                     <div class="contact-info__item">
                         <p class="info-user__text">Số điện thoại <sup style="color:red;">*</sup></p>
+<<<<<<< HEAD
                         <input type="text" name="" id="" class="info-user__input" value="<?=$row['phone']?>" placeholder="Nhập số điện thoại của bạn">
                     </div>
                     <div class="contact-info__item">
                         <p class="info-user__text">Email <small style="color:red;">(Không thay đổi)</small></p>
                         <input type="text" name="" id="" class="info-user__input" value="<?=$row['email']?>" disabled>
+=======
+                        <input type="text" name="phone" id="" class="info-user__input" value="<?= $rows['phone'] ?>" placeholder="Nhập số điện thoại của bạn">
+                    </div>
+                    <div class="contact-info__item">
+                        <p class="info-user__text">Email <small style="color:red;">(Không thay đổi)</small></p>
+                        <input type="text" name="" id="" class="info-user__input" value="<?= $rows['email'] ?>" disabled>
+>>>>>>> 83c1e50fd4670d59bd365b251706b880a1857279
                     </div>
                 </div>
                 <button class="btn btn--primary info-user__main--btn">Cập nhật</button>

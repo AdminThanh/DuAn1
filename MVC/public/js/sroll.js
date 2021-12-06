@@ -34,14 +34,14 @@ function deleteComment(id) {
       'id': id,
       'action': 'delete'
     }, function(data) {
-    location.reload();
-})
+        loadComment();
+        location.reload();
+    })
   }
 
 
   $(document).ready(function(){ 
-
-
+    
     // Thanh toán
         $("#checkoutSubmit").click(function() {
             $("#checkoutForm").submit();
