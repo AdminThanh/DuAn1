@@ -6,6 +6,7 @@ class UserModel extends DB
         $sql = "SELECT * FROM user";
         return mysqli_query($this->con, $sql);
     }
+
     public function ListUserRole()
     {
         $sql = "SELECT * FROM user 

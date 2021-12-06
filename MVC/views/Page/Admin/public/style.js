@@ -8,7 +8,7 @@ function deleteProduct(id) {
     'id': id,
     'action': 'delete'
   }, function(data) {
-    location.reload()
+    location.reload();
   })
 }
 
@@ -22,7 +22,7 @@ function deleteUser(id) {
     'id': id,
     'action': 'delete'
   }, function(data) {
-    location.reload()
+    location.reload();
   })
 }
 // COMMENT

@@ -20,6 +20,7 @@ class Home extends Controller
 
   function product($id)
   {
+    $_SESSION['idSP'] = $id;
     $Product = $this->model("ProductModel");
     $Category = $this->model("CategoryModel");
     $this->view("master2", [
@@ -40,6 +41,15 @@ class Home extends Controller
       "Page" => "login1",
     ]);
   }
+
+  function regsiter()
+  {
+    $Models = $this->model("HomeModel");
+    $this->view("master3", [
+      "Page" => "regsiter1",
+    ]);
+  }
+
   function loginAction()
   {
     $Login = $this->model("UserModel");
@@ -94,14 +104,30 @@ class Home extends Controller
 
   function checkout()
   {
-    // if (sizeof($_SESSION['giohang']) == 0) {
-    if (!isset($_SESSION['giohang'])) {
+
+
+    if (!isset($_SESSION['giohang']) && (isset($_SESSION['giohang']) == 0)) {
       echo '
             <script>
                 alert("Chưa có sản phẩm trong giỏ hàng")
                 window.location.assign("../");
             </script>
         ';
+    } else {
+      if (isset($_SESSION['giohang'])) {
+        $numCart = 0;
+        for ($i = 0; $i < count($_SESSION['giohang']); $i++) {
+          $numCart += $_SESSION['giohang'][$i][2];
+        }
+        if ($numCart == 0) {
+          echo '
+            <script>
+                alert("Chưa có sản phẩm trong giỏ hàng")
+                window.location.assign("../");
+            </script>
+        ';
+        }
+      }
     }
 
     if (isset($_SESSION['userlogin'])) {
@@ -161,9 +187,12 @@ class Home extends Controller
   function user()
   {
     $Category = $this->model("CategoryModel");
+    $User = $this->model("UserModel");
+    $id = $_SESSION['userlogin'][3];
     $this->view("master3", [
       "Page" => "user",
       "ShowMenu" => $Category->ListAll(),
+      "ShowAboutUser" => $User->ListItem($id),
     ]);
   }
 
@@ -186,7 +215,7 @@ class Home extends Controller
   //   $passwordnew = $_POST['passwordnew'];
   //   $checkPass = $UserModel->checkPass($password, $passwordnew, $user_id);
   // }
-  
+
   function changepass()
   {
     $UserModel = $this->model("UserModel");
@@ -196,10 +225,48 @@ class Home extends Controller
     $checkPass = $UserModel->checkPass($password, $passwordnew, $user_id);
   }
 
+  function deleteComment()
+  {
+    if (isset($_POST['id'])) {
+      $id = $_POST['id'];
+    } else {
+      $id = 0;
+    }
+    $ProductModel = $this->model("ProductModel");
+    $deleteComment = $ProductModel->deleteComment($id);
+  }
+
   function loadComment()
   {
-    $comment = $this->model("UserModel");
-    $kq = $comment->loadComment();
+    $ProductModel = $this->model("ProductModel");
+    $id = $_SESSION['idSP'];
+    $result = $ProductModel->showComment($id);
+
+    while ($binhluan = mysqli_fetch_assoc($result)) {
+?>
+      <div class="comment-list" id="load_data">
+        <div class="comment">
+          <div class="comment-avatar">
+            <img src="<?= BASE_URL ?>/MVC/public/images/users/SEIJ6567.JPG" alt="">
+          </div>
+          <div class="comment-user">
+            <div class="comment-user__name"><?= $binhluan['name'] ?></div>
+            <div class="comment-user__content"><?= $binhluan['comment_content'] ?></div>
+            <div class="comment-user__content time"><?= $binhluan['comment_date'] ?></div>
+            <?php
+            if (isset($_SESSION['userlogin'])) {
+              if ($binhluan['user_id'] == $_SESSION['userlogin'][3]) {
+            ?>
+                <p id="deletecomment" onclick="deleteComment(<?= $binhluan['comment_id'] ?>)" class="deletecomment">Xóa</p>
+            <?php
+              }
+            }
+            ?>
+          </div>
+        </div>
+      </div>
+<?php
+    }
   }
 
   function AddToCart()

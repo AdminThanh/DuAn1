@@ -25,13 +25,22 @@ function loginOnblur() {
     }
 }
 
+function deleteComment(id) {
+    var option = confirm('Bạn có chắc chắn muốn xoá sản phẩm này không?')
+    if(!option) {
+      return;
+    }
+    $.post('../deleteComment', {
+      'id': id,
+      'action': 'delete'
+    }, function(data) {
+    location.reload();
+})
+  }
+
+
   $(document).ready(function(){ 
 
-    // LỘC
-    // $(".checkbox1").click(function() {
-    //     $("#filter").submit();
-    //     console.log("K");
-    // });
 
     // Thanh toán
         $("#checkoutSubmit").click(function() {
@@ -70,13 +79,27 @@ function loginOnblur() {
                         swal("Thất bại!", response.message, "error");
                     } else {
                         document.getElementById("formComment").reset();
-                        swal("Thành công!", response.message, "success");
+                        // swal("Thành công!", response.message, "success");
+                        loadComment();
                     }
                 }
             });
         }
     });
 
+
+    loadComment();
+    function loadComment(){
+        $.ajax({
+            url : '../loadComment',
+            type : 'post',
+            data : {
+                orderby : 'DESC'
+            }
+        }).done(function(data){
+            $('#loadComment').html(data);
+        })
+   }
 
     // CART NUMBERư
     $("input[type=radio]").change(function(){
@@ -367,9 +390,11 @@ $("#form_login").validate({
         });
     }
 });
+// reponsive();
+// function reponsive(){
+//     /* Animated Navigation */
+// const toggle = document.querySelector('#toggle');
+// const nav = document.querySelector('#nav-tablet-mobile');
 
-/* Animated Navigation */
-const toggle = document.querySelector('#toggle');
-const nav = document.querySelector('#nav-tablet-mobile');
-
-toggle.addEventListener('click', () => nav.classList.toggle('active'));
+// toggle.addEventListener('click', () => nav.classList.toggle('active'));
+// }
