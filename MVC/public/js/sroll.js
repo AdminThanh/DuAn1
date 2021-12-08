@@ -174,17 +174,17 @@ $(document).ready(function () {
   var vua = $("p.Vừa").attr("name");
   var lon = $("p.Lớn").attr("name");
 
-  if(nho==0){
+  if (nho == 0) {
     console.log("undefined");
-    $("#sizeNho").prop('disabled', true);
+    $("#sizeNho").prop("disabled", true);
   }
-  if(vua==0){
+  if (vua == 0) {
     console.log("undefined");
-    $("#sizeVua").prop('disabled', true);
+    $("#sizeVua").prop("disabled", true);
   }
-  if(lon==0){
+  if (lon == 0) {
     console.log("undefined");
-    $("#sizeLon").prop('disabled', true);
+    $("#sizeLon").prop("disabled", true);
   }
 
   // CART NUMBER
@@ -196,22 +196,21 @@ $(document).ready(function () {
 
     if (data == "Nhỏ") {
       nho2 = formatNumber(nho);
-      $("#priceSize").html(nho2+ " VNĐ");
-      $("#pricePost").val(nho2+ " VNĐ");
+      $("#priceSize").html(nho2 + " VNĐ");
+      $("#pricePost").val(nho2 + " VNĐ");
       $("#pricePost2").val(nho);
     }
     if (data == "Vừa") {
       vua2 = formatNumber(vua);
-      $("#priceSize").html(vua2+ " VNĐ");
-      $("#pricePost").val(vua2+ " VNĐ");
+      $("#priceSize").html(vua2 + " VNĐ");
+      $("#pricePost").val(vua2 + " VNĐ");
       $("#pricePost2").val(vua);
     }
     if (data == "Lớn") {
       lon2 = formatNumber(lon);
-      $("#priceSize").html(lon2+ " VNĐ");
-      $("#pricePost").val(lon2+ " VNĐ");
+      $("#priceSize").html(lon2 + " VNĐ");
+      $("#pricePost").val(lon2 + " VNĐ");
       $("#pricePost2").val(lon);
-
     }
   });
 
@@ -566,7 +565,7 @@ $("#form_login").validate({
 });
 
 /* Animated Navigation */
-// const toggle = document.querySelector("#toggle");
-// const nav = document.querySelector("#nav-tablet-mobile");
+const toggle = document.querySelector("#toggle");
+const nav = document.querySelector("#nav-tablet-mobile");
 
-// toggle.addEventListener("click", () => nav.classList.toggle("active"));
+toggle.addEventListener("click", () => nav.classList.toggle("active"));

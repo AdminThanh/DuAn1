@@ -13,12 +13,12 @@
                 </div>
             </div>
 
-            <div class="featured-product__content w-100">
-                <div class="list-product row sm-gutter grid-4">
+            <div class="featured-product__content">
+                <div class="list-product row sm-gutter">
                     <?php
                     while ($row = mysqli_fetch_array(($data['showProduct']))) {
                     ?>
-                        <div class="col l-2-5 m-4 c-6">
+                        <div class="col l-2-5 m-4 c-4">
                             <a href="<?= BASE_URL ?>/home/product/<?= $row['product_id'] ?>" class="product-cart">
                                 <div class="product-cart__tags justify-content-right">
                                     <!-- <div class="tag-new">new</div> -->
@@ -90,7 +90,7 @@
                     <?php
                     while ($item = mysqli_fetch_array($data['showProductSelling'])) {
                     ?>
-                        <div class="col l-2-5 m-4 c-6">
+                        <div class="col l-2-5 m-4 c-4">
                             <a href="<?= BASE_URL ?>/home/product/<?= $item['product_id'] ?>" class="product-cart">
                                 <div class="product-cart__tags justify-content-right">
                                     <!-- <div class="tag-new">new</div> -->

@@ -3,22 +3,22 @@
 *,a, span ,input{
     font-family: 'Source Sans Pro', sans-serif;
 } */
-.locsp{
+.locsp {
   display: flex;
 }
-.locsp p{
+.locsp p {
   padding-right: 5px;
 }
 /* Thanh scrol; */
-.pagination_active{
+.pagination_active {
   border: 1px solid #ff929b;
   background-color: #ff929b;
   color: white;
 }
-.success a{
+.success a {
   text-decoration: none;
 }
-.success a:hover{
+.success a:hover {
   cursor: pointer;
   font-weight: 700;
 }
@@ -182,7 +182,7 @@
 .login-children {
   width: 150px;
 }
-.login-children:hover .login-children__list{
+.login-children:hover .login-children__list {
   display: block;
 }
 .my-account {
@@ -326,7 +326,7 @@
   background-color: #f5f5f5;
   border-radius: 0 0 4px 4px;
 }
-.login-children__list::before{
+.login-children__list::before {
   content: "";
   position: absolute;
   top: 0%;
@@ -359,7 +359,6 @@ li.login-item:last-child {
 }
 .login-item:hover {
   background-color: #282828c7;
-  
 }
 .login-item:hover a {
   color: white;
@@ -658,7 +657,6 @@ li.login-item:last-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
 }
 .ml-auto {
   margin-left: auto;

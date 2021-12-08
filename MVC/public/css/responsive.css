@@ -103,7 +103,7 @@
     bottom: 0px;
   }
   .nav-tablet-mobile.active .nav-tablet-mobile__icon .line1 {
-    top: 9px;
+    top: 7px;
     transform: rotate(-765deg) translateY(5.5px);
   }
 
